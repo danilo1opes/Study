@@ -1,0 +1,181 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(0, 25, 27);
+}
+
+#animation,
+.grid-item,
+#transition {
+    font-weight: 800;
+}
+
+#animation {
+    height: 20vh;
+    font-size: 45px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: Any 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes Any {
+    from { color: red; }
+    to { color: aqua; }
+}
+
+.grid-container {
+    display: grid;
+    border: 2px solid rgb(0, 25, 27);
+    grid-template-columns: repeat(auto-fill, minmax(600px, 6fr));
+    grid-gap: 70px;
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+    max-width: 100vw;
+    margin: 0 auto;
+}
+
+.grid-item {
+    color: wheat;
+    font-size: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#transition {
+    transition: 2.9s ease-out 0.5s, transform 0.5s ease-in-out;
+    font-size: 64px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color: black;
+    }
+
+    #animation {
+        color: white;
+        font-size: 24px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        animation: ida 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes ida {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(200px); }
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column-reverse;
+        border: 2px solid black;
+        color: white;
+    }
+
+    .grid-item {
+        color: white;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    #none {
+        border: none;
+    }
+
+    #transition {
+        transform: rotateX(150deg) rotateY(170deg) rotateZ(150deg);
+        transform-origin: 40% 50px 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        background-color: rgb(1, 1, 65);
+    }
+
+    #animation {
+        color: blanchedalmond;
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: slide 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes slide {
+        from { margin-left: 100%; width: 300%; }
+        to { margin-left: 0%; width: 100%; }
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 3fr));
+        margin: 0;
+    }
+
+    .grid-item {
+        color: rgb(9, 233, 65);
+    }
+
+    #none {
+        border: none;
+    }
+
+    #transition {
+       transform: skewY(-140deg);
+       transition: transform 2s ease-out 0.5s;
+       transform-origin: 2% 15% 0;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    body {
+        background-color: blueviolet;
+    }
+
+    #animation {
+        color: rgb(42, 42, 44);
+        font-size: 50px;
+        font-family: monospace;
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: fade-in 1s ease-out forwards;
+    }
+
+    @keyframes fade-in {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .grid-container {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row-reverse;
+        height: 50vh;
+        width: 100vw;
+        align-items: center;
+    }
+
+    .grid-item {
+        color: rgb(46, 1, 151);
+        border: 4px solid;
+    }
+
+    #none {
+        border: none;
+    }
+
+    #transition {
+        transform-box: border-box;
+        transform: scale(1.5);
+    }
+}
