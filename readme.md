@@ -1,13 +1,15 @@
- transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-        (0.755) é a coordenada x do ponto de controle inicial.
-        (0.05) é a coordenada y do ponto de controle inicial.
-        (0.855) é a coordenada x do ponto de controle final.
-        (0.06) é a coordenada y do ponto de controle final. 
+Registro efetuado durante o processo de desenvolvimento do código.
         
 
          -webkit = prefixo para Safari Apple
            -moz- = firefox
            -ms- = Internet Explorer
+
+         transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        (0.755) é a coordenada x do ponto de controle inicial.
+        (0.05) é a coordenada y do ponto de controle inicial.
+        (0.855) é a coordenada x do ponto de controle final.
+        (0.06) é a coordenada y do ponto de controle final. 
         
 
          transform: translateX...; (Used quando se tem img) 
